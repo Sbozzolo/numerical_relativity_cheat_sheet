@@ -1,12 +1,12 @@
 \documentclass[]{scrartcl}
 \usepackage{amsmath}
-
+\usepackage{amssymb}
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
 
 \author{Gabriele Bozzola}
 \title{Numerical Relativity Cheat Sheet}
 \date{}
-\subtitle{Equations I should know, but I don't}
+\subtitle{Equations I should remember, but I don't}
 
 
 
@@ -28,6 +28,10 @@ The line element $\d s^2$ is
   \d s^2 = g_{\alpha\beta} \d x^\alpha \d x^\beta = - \alpha^2 \d t^2 + \gamma_{ij} (\d x^i + \beta^i \d t) (\d x^j + \beta^j \d t)
 \end{equation}
 \begin{equation}
+  \label{eq:11}
+  \gamma^{a\beta} = g^{\alpha\beta} + n^\alpha n^\beta
+\end{equation}
+\begin{equation}
   \label{eq:4}
   n^\alpha = \frac{1}{\alpha} (1, - \beta^i)
 \end{equation}
@@ -35,6 +39,55 @@ The line element $\d s^2$ is
   \label{eq:5}
   n_\alpha = (-\alpha,0,0,0)
 \end{equation}
+
+\subsection{Constraints}
+\label{sec:constraints}
+
+Momentum constraint
+\begin{equation}
+  \label{eq:9}
+  S_i = - \gamma_{i\alpha} n_\beta T^{\alpha\beta}\,.
+\end{equation}
+
+\section{Matter and Equations of State}
+\label{sec:matter}
+
+Let $\rho_0$ be the rest-mass density, and $\epsilon$ the specific internal energy
+density, the total mass-energy $\rho$ measured by an observer comoving with the
+fluid is
+\begin{equation}
+  \label{eq:6}
+  \rho = \rho_0 (1 + \epsilon) = \rho_0 + \rho_0 \epsilon = \rho_0 + \varepsilon_{\text{int}}\,,
+\end{equation}
+with $\varepsilon_{\text{int}}$ internal energy density.
+
+The enthalpy is $h = (1 + \epsilon + P\slash \rho_0)$, or $\rho_0 h = \rho + P$.
+
+The Gamma-law equation of state is $P = (\Gamma - 1) \rho_0 \epsilon$, or $P = (\Gamma - 1) \varepsilon_{\text{int}}$.
+
+
+\subsection{Velocity definitions}
+\label{sec:velocity-definitions}
+
+Let $u^\alpha$ be the four-velocity of the fluid.
+\begin{equation}
+  \label{eq:10}
+  W = -n_\alpha u^\alpha
+\end{equation}
+
+\begin{equation}
+  \label{eq:7}
+  u^t = \frac{W}{\alpha}\,.
+\end{equation}
+
+
+
+Stress-energy tensor of a perfect fluid
+\begin{equation}
+  \label{eq:8}
+  T^{\alpha\beta} = \rho_0 h u^\alpha u^\beta + P g^{\alpha\beta},.
+\end{equation}
+
 \section{Useful identities}
 \label{sec:useful-identities}
 
