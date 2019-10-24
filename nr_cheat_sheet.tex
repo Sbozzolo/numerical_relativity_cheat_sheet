@@ -1,0 +1,51 @@
+\documentclass[]{scrartcl}
+\usepackage{amsmath}
+
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+\author{Gabriele Bozzola}
+\title{Numerical Relativity Cheat Sheet}
+\date{}
+\subtitle{Equations I should know, but I don't}
+
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Conventions}
+\label{sec:conventions}
+
+We denote the metric as $g_{\alpha\beta}$.
+
+\section{ADM Decomposition}
+\label{sec:adm-decomposition}
+
+The line element $\d s^2$ is
+\begin{equation}
+  \label{eq:2}
+  \d s^2 = g_{\alpha\beta} \d x^\alpha \d x^\beta = - \alpha^2 \d t^2 + \gamma_{ij} (\d x^i + \beta^i \d t) (\d x^j + \beta^j \d t)
+\end{equation}
+\begin{equation}
+  \label{eq:4}
+  n^\alpha = \frac{1}{\alpha} (1, - \beta^i)
+\end{equation}
+\begin{equation}
+  \label{eq:5}
+  n_\alpha = (-\alpha,0,0,0)
+\end{equation}
+\section{Useful identities}
+\label{sec:useful-identities}
+
+\begin{equation}
+  \label{eq:3}
+  \sqrt{-g} = \alpha \sqrt{\gamma}
+\end{equation}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
