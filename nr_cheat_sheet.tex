@@ -29,7 +29,15 @@ The line element $\d s^2$ is
 \end{equation}
 \begin{equation}
   \label{eq:11}
+  \gamma_{a\beta} = g_{\alpha\beta} + n_\alpha n_\beta
+\end{equation}
+\begin{equation}
+  \label{eq:11}
   \gamma^{a\beta} = g^{\alpha\beta} + n^\alpha n^\beta
+\end{equation}
+\begin{equation}
+  \label{eq:12}
+  n^\alpha \gamma_{\alpha\beta} = 0
 \end{equation}
 \begin{equation}
   \label{eq:4}
@@ -80,7 +88,25 @@ Let $u^\alpha$ be the four-velocity of the fluid.
   u^t = \frac{W}{\alpha}\,.
 \end{equation}
 
-
+\texttt{IllinoisGRMHD}:
+\begin{equation}
+  \label{eq:13}
+  v^i_{\text{IL}} = \frac{u^i}{u^t}
+\end{equation}
+Valencia:
+\begin{equation}
+  \label{eq:14}
+  v^i_{\text{VA}} = \frac{1}{\alpha} \left( \frac{u^i}{u^t} + \beta^i \right)
+\end{equation}
+Conversion:
+\begin{equation}
+  \label{eq:15}
+  v^i_{\text{VA}} = \frac{1}{\alpha} \left( v^i_{\text{IL}} + \beta^i \right)
+\end{equation}
+\begin{equation}
+  \label{eq:15}
+  v^i_{\text{IL}} = {\alpha} \left( \alpha v^i_{\text{IL}} - \beta^i \right)
+\end{equation}
 
 Stress-energy tensor of a perfect fluid
 \begin{equation}
