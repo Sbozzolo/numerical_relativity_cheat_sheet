@@ -1,7 +1,10 @@
 \documentclass[]{scrartcl}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{siunitx}
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+\DeclareSIUnit[]\sunmass{\text{\ensuremath{M_{\odot}}}}
 
 \author{Gabriele Bozzola}
 \title{Numerical Relativity Cheat Sheet}
@@ -148,6 +151,25 @@ Rest-mass
 \begin{equation}
   \label{eq:3}
   \sqrt{-g} = \alpha \sqrt{\gamma}
+\end{equation}
+
+\section{Numerical values}
+\label{sec:numerical-values}
+
+Length-scale associated to \SI{1}{\sunmass}:
+\begin{equation}
+  \label{eq:length-1-Msun}
+  [\textrm{L}] = \frac{GM_{\odot}}{c^{2}} = \SI{1.477}{\km}
+\end{equation}
+Time-scale associated to \SI{1}{\sunmass}:
+\begin{equation}
+  \label{eq:length-1-Msun}
+  [\textrm{T}] = \frac{GM_{\odot}}{c^{3}} = \SI{4.93}{\micro\s} \approx \SI{5}{\micro\s}
+\end{equation}
+Frequency-scale associated to \SI{1}{\sunmass}:
+\begin{equation}
+  \label{eq:length-1-Msun}
+  [\textrm{f}] = \frac{1}{[\textrm{T}]} = \frac{c^{3}}{GM_{\odot}} = \SI{203}{\kilo\Hz} \approx \SI{200}{\kilo\Hz}
 \end{equation}
 
 \end{document}
